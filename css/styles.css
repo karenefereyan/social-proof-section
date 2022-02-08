@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --very-dark-magenta: hsl(300, 43%, 22%);
+    --soft-pink:hsl(333, 80%, 67%);
+    --dark-grayish-magenta: hsl(303, 10%, 53%);
+    --light-grayish-magenta: hsl(300, 24%, 96%);
+    --white:hsl(0, 0%, 100%);
+    }
+
+img{
+    max-width: 100%;
+    height: auto;
+    /* If height: auto; the element will automatically adjust its height to allow its content to be displayed correctly. If height is set to a numeric value (like pixels, (r)em, percentages) then if the content does not fit within the specified height, it will overflow.*/
+    font-size: 15px;
+}
+
+body{
+    font-family: 'Spartan', sans-serif;
+    /* background-color: var(--light-grayish-magenta) ; */
+    background-color: var(--white);
+    text-align: center;
+}
+
+h1{
+    color: var(--very-dark-magenta);
+}
+
+p{
+    color: var(--dark-grayish-magenta);
+    margin: 2.5rem 0 ;
+    line-height: 1.5;
+}
+
+.container{
+    padding: 5rem 1.75rem 2.5rem 1.75rem;
+    position: relative;
+}
+
+
+.top-image{
+    background: url("../images/bg-pattern-top-mobile.svg");
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 275px;
+    width: 100%;
+    z-index: -999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom:0
+}
+
+.bottom-image{
+    background: url("../images/bg-pattern-bottom-mobile.svg");
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: -999;
+    width: 100%;
+    height: 50vh;
+    top: 100;
+    left: 100;
+    right: 0;
+    bottom: 0;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.review-block li{
+    background-color:var(--light-grayish-magenta);
+    padding: 1.2rem 1rem;
+    margin-top: 1.5rem;
+    border-radius: .75rem;  
+}
+
+.review-block .images{
+    margin-bottom: 1rem;
+}
+
+.review-block span{
+    color: var(--very-dark-magenta);
+    font-weight: 700;
+}
+
+
+.review-comments li{
+    background-color: var(--very-dark-magenta); 
+    border-radius: .75rem;
+    padding: 1.75rem 1.5rem;
+    margin-top: 2.5rem;
+}
+
+.review-comments li article{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    color: var(--light-grayish-magenta);
+}
+
+.review-comments li article div span{
+    color: var(--soft-pink);
+    display: block;
+    margin-top: .35rem;
+    line-height: 1.5;
+}
+
+.review-comments li article img{
+    width: 20%;
+    border-radius: 100%;
+    margin-right: 1.5rem;
+}
+
+.review-comments li p{
+    color: var(--light-grayish-magenta);
+    text-align: left;
+}
+
+.attribution {
+    font-size: 1rem;
+    text-align: center;
+    margin: 1.5rem 1rem 0 1rem;
+  }
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+
+  @media screen and (min-width:768px){
+      .top-image{
+          background: url("../images/bg-pattern-top-desktop.svg")
+          no-repeat cover/center;
+          height: 50vh;
+          width: 50%;
+      }
+
+      .bottom-image{
+        background: url("../images/bg-pattern-bottom-desktop.svg")
+        no-repeat cover/center;
+        position: absolute;
+        width: 40%;
+        height: 70vh;
+        top: 100;
+        left: 100;
+        right: 0;
+        bottom:0;
+        border-radius: 0 30px;
+    }
+
+      .container{
+          text-align: left;
+          padding: 2.5rem 2rem;
+      }
+
+      main{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+      }
+
+      main .heading-text{
+          width: 40%;
+          margin-right: 2rem;
+      }
+
+      .review-block{
+          width: 50%;
+      }
+
+      .review-block li{
+          width: 75%;
+      }
+
+      .review-block li:nth-child(2){
+          margin-left: 5rem;
+      }
+
+      .review-block li:nth-child(3){
+        margin-left: 10rem;
+    }
+
+      .review-block li div{
+          display:flex;
+      }
+
+      .review-block li div span{
+          display: block;
+          margin-left: 1.75rem;
+      }
+
+      .review-comments{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+      }
+
+      .review-comments li:first-child{
+          margin-right:2rem;
+      }
+
+      .review-comments li:nth-child(2){
+        margin-top: 5rem;
+    }
+
+    .review-comments li:nth-child(3){
+        margin: 10rem 0 0 2rem;
+    }
+
+  }
